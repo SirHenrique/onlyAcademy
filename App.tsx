@@ -55,7 +55,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   );
 }
 
-
+// Colocando outras altras alteração na branch Dev
 //Colocando alterações do meu projeto da Main
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
