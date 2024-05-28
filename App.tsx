@@ -1,7 +1,4 @@
-
-
-
-  import './translation';
+import './translation';
 
 import "react-native-gesture-handler";
 
@@ -23,6 +20,7 @@ export default function App() {
 			Inter: require("@tamagui/font-inter/otf/Inter-Medium.otf"),
 			InterBold: require("@tamagui/font-inter/otf/Inter-Bold.otf"),
 		});
+
 
 		useEffect(() => {
 			if (loaded) {

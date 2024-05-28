@@ -18,7 +18,7 @@ import Camera from "screens/camera";
 
 		return (
 			<NavigationContainer>
-				<Stack.Navigator initialRouteName="Camera" screenOptions={{ headerShown: false }}>
+				<Stack.Navigator initialRouteName="Profile" screenOptions={{ headerShown: false }}>
 					<Stack.Screen name="Profile" component={Profile}  />
 					<Stack.Screen name="Camera" component={Camera} />
 				</Stack.Navigator>
