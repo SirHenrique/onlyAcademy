@@ -45825,6 +45825,76 @@
           "name": "color-192",
           "val": "hsl(53, 100%, 91.0%)",
           "variable": ""
+        },
+        "appBackground": {
+          "isVar": true,
+          "key": "$appBackground",
+          "name": "color-193",
+          "val": "#fffbeb",
+          "variable": ""
+        },
+        "appPrimary10": {
+          "isVar": true,
+          "key": "$appPrimary10",
+          "name": "color-194",
+          "val": "#86BEDA",
+          "variable": ""
+        },
+        "appPrimary20": {
+          "isVar": true,
+          "key": "$appPrimary20",
+          "name": "color-195",
+          "val": "#009DCF",
+          "variable": ""
+        },
+        "appPrimary30": {
+          "isVar": true,
+          "key": "$appPrimary30",
+          "name": "color-196",
+          "val": "#008DC0",
+          "variable": ""
+        },
+        "appPrimary50": {
+          "isVar": true,
+          "key": "$appPrimary50",
+          "name": "color-197",
+          "val": "#007AA2",
+          "variable": ""
+        },
+        "appSecondary100": {
+          "isVar": true,
+          "key": "$appSecondary100",
+          "name": "color-198",
+          "val": "#006A89",
+          "variable": ""
+        },
+        "appSecondary200": {
+          "isVar": true,
+          "key": "$appSecondary200",
+          "name": "color-199",
+          "val": "#d97206",
+          "variable": ""
+        },
+        "appSecondary300": {
+          "isVar": true,
+          "key": "$appSecondary300",
+          "name": "color-200",
+          "val": "#b44f09",
+          "variable": ""
+        },
+        "appSecondary400": {
+          "isVar": true,
+          "key": "$appSecondary400",
+          "name": "color-201",
+          "val": "#923d0e",
+          "variable": ""
+        },
+        "appSecondary500": {
+          "isVar": true,
+          "key": "$appSecondary500",
+          "name": "color-202",
+          "val": "#78320f",
+          "variable": ""
         }
       },
       "radius": {
@@ -48030,6 +48100,76 @@
         "key": "$yellow12Dark",
         "name": "color-192",
         "val": "hsl(53, 100%, 91.0%)",
+        "variable": ""
+      },
+      "$color.appBackground": {
+        "isVar": true,
+        "key": "$appBackground",
+        "name": "color-193",
+        "val": "#fffbeb",
+        "variable": ""
+      },
+      "$color.appPrimary10": {
+        "isVar": true,
+        "key": "$appPrimary10",
+        "name": "color-194",
+        "val": "#86BEDA",
+        "variable": ""
+      },
+      "$color.appPrimary20": {
+        "isVar": true,
+        "key": "$appPrimary20",
+        "name": "color-195",
+        "val": "#009DCF",
+        "variable": ""
+      },
+      "$color.appPrimary30": {
+        "isVar": true,
+        "key": "$appPrimary30",
+        "name": "color-196",
+        "val": "#008DC0",
+        "variable": ""
+      },
+      "$color.appPrimary50": {
+        "isVar": true,
+        "key": "$appPrimary50",
+        "name": "color-197",
+        "val": "#007AA2",
+        "variable": ""
+      },
+      "$color.appSecondary100": {
+        "isVar": true,
+        "key": "$appSecondary100",
+        "name": "color-198",
+        "val": "#006A89",
+        "variable": ""
+      },
+      "$color.appSecondary200": {
+        "isVar": true,
+        "key": "$appSecondary200",
+        "name": "color-199",
+        "val": "#d97206",
+        "variable": ""
+      },
+      "$color.appSecondary300": {
+        "isVar": true,
+        "key": "$appSecondary300",
+        "name": "color-200",
+        "val": "#b44f09",
+        "variable": ""
+      },
+      "$color.appSecondary400": {
+        "isVar": true,
+        "key": "$appSecondary400",
+        "name": "color-201",
+        "val": "#923d0e",
+        "variable": ""
+      },
+      "$color.appSecondary500": {
+        "isVar": true,
+        "key": "$appSecondary500",
+        "name": "color-202",
+        "val": "#78320f",
         "variable": ""
       },
       "$radius.0": {

@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { RootStackParamList } from '../navigation';
-import { RouteProp, useRoute } from '@react-navigation/native';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { View, Text } from 'tamagui';
 import Constants from 'expo-constants';
 import { Button, Linking, PixelRatio, StatusBar, TouchableOpacity } from 'react-native';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import { CameraType } from 'expo-camera/build/legacy/Camera.types';
 import { captureRef } from 'react-native-view-shot';
+import { Ionicons } from '@expo/vector-icons';
 
 
 
@@ -20,6 +21,7 @@ export default function Camera() {
   const [permission, requestPermission] = useCameraPermissions();
   const targetPixelCount = 1080; 
 const pixelRatio = PixelRatio.get(); 
+const navigation: any = useNavigation();
 
 const pixels = targetPixelCount / pixelRatio;
 
@@ -51,32 +53,48 @@ const pixels = targetPixelCount / pixelRatio;
         const data = await cameraRef.current
         ?.takePictureAsync({
           skipProcessing: true,
+          base64: true
         })
-       setUri(data.uri)
+       navigation.navigate('Publication',{photo: {
+        base64: data.base64,
+        uri: data.uri
+       }})
 
     }
   }
   return (
     <View flex={1} backgroundColor='#fff'>
-      <View backgroundColor='#FFF' height={Constants.statusBarHeight} />
+      <View backgroundColor='#007AA2' height={Constants.statusBarHeight} alignItems='center' />
       <StatusBar
-        barStyle='dark-content'
-        backgroundColor='#FBBA25'
+        barStyle='light-content'
+        backgroundColor='#007AA2'
         translucent
       />
       <CameraView ref={cameraRef}  barcodeScannerSettings={{
         barcodeTypes: ["qr"] 
       }} style={{ height:725 }} facing={facing} onBarcodeScanned={scanned ? undefined : handleBarCodeScanned} >
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={{backgroundColor:'#fff', width:40, borderRadius:60, marginLeft:10, position: 'absolute', marginTop: 15}}>
+                <Ionicons
+                    name={'arrow-back'}
+                    size={40}
+                  />
+                </TouchableOpacity>
       </CameraView> 
-      <View flexDirection='row'>
-      <TouchableOpacity  onPress={toggleCameraFacing} style={{alignItems:'center', justifyContent:'center', marginTop:40}}>
-            <Text fontSize={30}>Trocar Câmera!</Text>
+      <View  flexDirection='row' marginTop={20}>
+      
+     <TouchableOpacity onPress={takePicture} style={{alignItems:'center', justifyContent:'center', marginRight:100, marginLeft: 170}}>
+     <View backgroundColor={'#000'} alignItems='center' justifyContent='center' height={70} width={70} borderRadius={100}>
+      <View backgroundColor={'#000'} borderColor={'#fff'} borderWidth={5} height={60} width={60} borderRadius={100}> 
+      </View>
+     </View>
      </TouchableOpacity>
-     <TouchableOpacity  onPress={takePicture} style={{alignItems:'center', justifyContent:'center', marginTop:40}}>
-            <Text fontSize={30}>Tirar Foto!</Text>
+     <TouchableOpacity  onPress={toggleCameraFacing} style={{alignItems:'center', justifyContent:'center'}}>
+                  <Ionicons
+                    name={'camera-reverse'}
+                    size={50}
+                  />
      </TouchableOpacity>
       </View>
-      
  </View>
   )
 }
